@@ -1,0 +1,89 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Decompiler = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local Decompile = Instance.new("TextButton")
+local UIGradient_2 = Instance.new("UIGradient")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+Decompiler.Name = "Decompiler"
+Decompiler.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Decompiler.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = Decompiler
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.379533678, 0, 0.401985109, 0)
+Frame.Size = UDim2.new(0, 372, 0, 158)
+
+UICorner.CornerRadius = UDim.new(0, 25)
+UICorner.Parent = Frame
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.51, Color3.fromRGB(255, 0, 90)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 123))}
+UIGradient.Parent = Frame
+
+Decompile.Name = "Decompile"
+Decompile.Parent = Frame
+Decompile.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Decompile.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Decompile.BorderSizePixel = 0
+Decompile.Position = UDim2.new(0.231182799, 0, 0.556962013, 0)
+Decompile.Size = UDim2.new(0, 200, 0, 50)
+Decompile.Font = Enum.Font.SourceSansBold
+Decompile.Text = "Decompile"
+Decompile.TextColor3 = Color3.fromRGB(165, 165, 165)
+Decompile.TextScaled = true
+Decompile.TextSize = 14.000
+Decompile.TextWrapped = true
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 255, 183)), ColorSequenceKeypoint.new(0.57, Color3.fromRGB(133, 255, 46)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(179, 255, 0))}
+UIGradient_2.Parent = Decompile
+
+UICorner_2.CornerRadius = UDim.new(0, 12)
+UICorner_2.Parent = Decompile
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 372, 0, 69)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Jealous's Decompiler"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+-- Scripts:
+
+local function HQEQB_fake_script() -- Decompile.LocalScript 
+	local script = Instance.new('LocalScript', Decompile)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		saveinstance(game)
+	end)
+end
+coroutine.wrap(HQEQB_fake_script)()
+local function EMFSKEY_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	script.Parent.Text = game.PlaceId
+end
+coroutine.wrap(EMFSKEY_fake_script)()
+local function URMJU_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	script.Parent.Draggable = true
+end
+coroutine.wrap(URMJU_fake_script)()
